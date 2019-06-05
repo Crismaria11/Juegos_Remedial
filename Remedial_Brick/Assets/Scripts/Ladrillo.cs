@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rebotar : MonoBehaviour
+public class Ladrillo : MonoBehaviour
 {
-    public Pelotita script;
+    public int puntos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +17,4 @@ public class Rebotar : MonoBehaviour
     {
         
     }
-
-    /*private void OnTriggerEnter2D(Collider2D other)
-    {
-        other.GetComponent<Pelotita>().Reinicio;
-    }*/
 }

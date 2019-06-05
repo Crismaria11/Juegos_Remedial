@@ -7,6 +7,7 @@ public class Barrita : MonoBehaviour
     float velocidad = 10f;
     float noPasarDerecha = 5.07f;
     float noPasarIzquierda = -5.1f;
+    public Manager juego;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,11 @@ public class Barrita : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (juego.finDeJuego)
+        {
+            return;
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
         transform.Translate(Vector2.right * horizontal * Time.deltaTime * velocidad);
 
